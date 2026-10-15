@@ -143,7 +143,11 @@ function Hero() {
         </div>
         <motion.div style={{ y }} className="relative min-w-0">
           <Reveal delay={0.2}>
-            <img src="/img/oc-life-saas-traceability-dashboard-full-laptop.png" alt="Manager Dashboard OC-Life" className="w-full rounded-2xl" />
+            <div className="relative mx-auto aspect-[5/4] w-full max-w-lg">
+              <div className="absolute inset-[12%] rounded-full bg-mint/25 blur-3xl" />
+              <img src="/img/phone-qc.webp" alt="Aplikasi petugas: Pickup & QC Log" className="absolute left-[2%] top-0 h-full w-auto -rotate-6 drop-shadow-[0_30px_40px_rgba(0,0,0,.45)]" />
+              <img src="/img/phone-reward.webp" alt="Aplikasi tenant: Circular Reward" className="absolute right-[2%] top-[8%] h-full w-auto rotate-6 drop-shadow-[0_30px_40px_rgba(0,0,0,.45)]" />
+            </div>
           </Reveal>
           <FloatCard className="left-0 top-6 sm:-left-8" delay={0.6}>
             <span className="grid h-9 w-9 place-items-center rounded-xl bg-leaf text-white"><CircleCheck size={18} /></span>
