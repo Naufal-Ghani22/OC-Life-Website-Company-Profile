@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --color-forest: #0f3d2e;
+  --color-forest-2: #145a40;
+  --color-leaf: #22b35e;
+  --color-mint: #7ee08a;
+  --color-mint-50: #eefbf1;
+  --color-cream: #faf6ec;
+  --color-sun: #f5c542;
+  --color-ink: #0b1f17;
+  --font-heading: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); background: var(--color-cream); color: var(--color-ink); -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4 { font-family: var(--font-heading); letter-spacing: -0.02em; }
+.grain::after { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .06;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E"); }
+.dot-grid { background-image: radial-gradient(rgba(15,61,46,.12) 1px, transparent 1px); background-size: 22px 22px; }
+@keyframes spin-slow { to { transform: rotate(360deg); } }
+.spin-slow { animation: spin-slow 40s linear infinite; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+.marquee { animation: marquee 30s linear infinite; }
+.marquee-rev { animation: marquee 34s linear infinite reverse; }
+.marquee-wrap:hover .marquee, .marquee-wrap:hover .marquee-rev { animation-play-state: paused; }
+.fade-x { mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); }
